@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600&display=swap');
+
+/* ─────────────────────────────────────────────────────────────
+   LIGHT THEME — applied to html element with data-theme=light
+   Also :root as fallback (will be overridden by dark below)
+───────────────────────────────────────────────────────────── */
+:root {
+  --bg-page:        #f0f2f8;
+  --bg-card:        #ffffff;
+  --bg-card-blur:   rgba(255,255,255,0.88);
+  --bg-column:      #f7f8fc;
+  --bg-input:       #ffffff;
+  --bg-hover:       #f1f5f9;
+  --bg-drop:        #eef2ff;
+  --bg-badge:       #f1f5f9;
+  --border:         #e2e8f0;
+  --border-hover:   #a5b4fc;
+  --text-primary:   #0f172a;
+  --text-secondary: #475569;
+  --text-muted:     #94a3b8;
+  --accent:         #6366f1;
+  --accent-hover:   #4f46e5;
+  --accent-bg:      #eef2ff;
+  --accent-glow:    rgba(99,102,241,0.22);
+  --success:        #10b981;
+  --success-bg:     #ecfdf5;
+  --success-border: #6ee7b7;
+  --warning:        #f59e0b;
+  --warning-text:   #92400e;
+  --warning-bg:     #fffbeb;
+  --danger:         #ef4444;
+  --danger-bg:      #fef2f2;
+  --danger-border:  #fca5a5;
+  --info-bg:        #f8fafc;
+  --shadow:         rgba(15,23,42,0.07);
+  --shadow-hover:   rgba(15,23,42,0.14);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   DARK THEME — higher specificity so it overrides :root above
+   Using html[data-theme="dark"] to beat :root specificity
+───────────────────────────────────────────────────────────── */
+html[data-theme="dark"] {
+  --bg-page:        #0d0f1a !important;
+  --bg-card:        #161828 !important;
+  --bg-card-blur:   rgba(22,24,40,0.92) !important;
+  --bg-column:      #131522 !important;
+  --bg-input:       #1e2035 !important;
+  --bg-hover:       #1e2035 !important;
+  --bg-drop:        #1e224a !important;
+  --bg-badge:       #1e2035 !important;
+  --border:         #2a2d4a !important;
+  --border-hover:   #5558a0 !important;
+  --text-primary:   #e2e8f0 !important;
+  --text-secondary: #94a3b8 !important;
+  --text-muted:     #64748b !important;
+  --accent:         #818cf8 !important;
+  --accent-hover:   #6366f1 !important;
+  --accent-bg:      #1e224a !important;
+  --accent-glow:    rgba(129,140,248,0.22) !important;
+  --success:        #34d399 !important;
+  --success-bg:     #0d2d22 !important;
+  --success-border: #065f46 !important;
+  --warning:        #fbbf24 !important;
+  --warning-text:   #fbbf24 !important;
+  --warning-bg:     #2d2200 !important;
+  --danger:         #f87171 !important;
+  --danger-bg:      #2d1515 !important;
+  --danger-border:  #7f1d1d !important;
+  --info-bg:        #1a1c2e !important;
+  --shadow:         rgba(0,0,0,0.32) !important;
+  --shadow-hover:   rgba(0,0,0,0.45) !important;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Reset & Base
+───────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  background: var(--bg-page);
+  color: var(--text-primary);
+  transition: background 0.3s, color 0.3s;
+  -webkit-font-smoothing: antialiased;
+}
+
+input, select, textarea, button { font-family: inherit; }
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
